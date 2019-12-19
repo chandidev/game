@@ -20,18 +20,22 @@ unit tests cover edge cases, normal run cases and extremely large numbers.
 there is an additional unit test which has been commented out, which outputs the time comparison between the slow and fast implementations.
 when used with small numbers there is no difference, but with large numbers it will be very significant.
 in a typical run with 
+
 student number : 99999
+
 counting       : 99999
 
-comparison times:
+when run with those inputs, comparison times:
+
 fast run timetaken: 256  milliseconds
+
 slow run timetaken: 3660 milliseconds
 
 
-further improvements to fast algorithm
+**further improvements to fast algorithm**
 In the Main game (fast version) there are two ternary (inline if) statements for each loop
 But most of the time it will be evaluated as true. 
 therefore runtime performance can be further improved if try cache block is used around 
-int elementValue = seats.get(lastEvictedPosition); statement. 
+`int elementValue = seats.get(lastEvictedPosition);` statement. 
 when it fails with IndexOutofBoundException after caching, corrective action can be done and continue.
 
