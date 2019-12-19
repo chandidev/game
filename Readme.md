@@ -39,3 +39,7 @@ therefore runtime performance can be further improved if try cache block is used
 `int elementValue = seats.get(lastEvictedPosition);` statement. 
 when it fails with IndexOutofBoundException after caching, corrective action can be done and continue.
 
+
+**To run tests**
+**in an ide** run unit test GameApplicationTest 
+**on command line** mvn test
